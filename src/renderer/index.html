@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peak Reader</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <button class="hamburger-btn" id="hamburgerBtn" title="Toggle sidebar">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </button>
+      <span class="app-title">Peak Reader</span>
+      <div class="header-spacer"></div>
+      <button class="import-btn" id="importBtn" title="Import books">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        Import
+      </button>
+    </header>
+
+    <!-- Body -->
+    <div class="body-container">
+      <!-- Sidebar -->
+      <nav class="sidebar" id="sidebar">
+        <div class="nav-list">
+          <div class="nav-item active" data-page="home" title="Home">
+            <div class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <span class="nav-item-text">Home</span>
+          </div>
+
+          <div class="nav-item" data-page="continue" title="Continue Reading">
+            <div class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <span class="nav-item-text">Continue Reading</span>
+          </div>
+
+          <div class="nav-item" data-page="favourites" title="Favourites">
+            <div class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </div>
+            <span class="nav-item-text">Favourites</span>
+          </div>
+
+          <div class="nav-item" data-page="quotes" title="Quotes">
+            <div class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3z"/>
+              </svg>
+            </div>
+            <span class="nav-item-text">Quotes</span>
+          </div>
+
+          <div class="nav-item" data-page="all-books" title="All Books">
+            <div class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+              </svg>
+            </div>
+            <span class="nav-item-text">All Books</span>
+            <span class="nav-item-subtitle" id="bookCount">0</span>
+          </div>
+
+          <div class="nav-item" data-page="shelfs" title="Shelfs">
+            <div class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <span class="nav-item-text">Shelfs</span>
+          </div>
+
+          <div class="nav-item nav-item-stats" data-page="stats" title="Stats">
+            <div class="nav-item-icon stats-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <span class="nav-item-text">Stats</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content Area -->
+      <main class="content-area" id="contentArea">
+        <!-- Dynamic content injected by JS -->
+      </main>
+    </div>
+  </div>
+
+  <!-- Text selection menu -->
+  <div class="selection-menu" id="selectionMenu">
+    <button class="selection-menu-btn" data-action="copy">Copy</button>
+    <button class="selection-menu-btn" data-action="highlight">Highlight</button>
+    <button class="selection-menu-btn" data-action="quote">Add Quote</button>
+    <button class="selection-menu-btn" data-action="note">Note</button>
+    <button class="selection-menu-btn" data-action="define">Define</button>
+    <button class="selection-menu-btn" data-action="search">Search in book</button>
+    <button class="selection-menu-btn" data-action="translate">Translate</button>
+    <button class="selection-menu-btn" data-action="share">Share</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-title" id="modalTitle">Modal</div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-actions">
+        <button class="modal-btn modal-btn-secondary" id="modalCancel">Cancel</button>
+        <button class="modal-btn modal-btn-primary" id="modalConfirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import overlay -->
+  <div class="import-overlay" id="importOverlay">
+    <div class="spinner" style="border-color: rgba(255,255,255,0.3); border-top-color: white;"></div>
+    <div class="import-progress" id="importProgress">Importing books...</div>
+    <div class="import-bar"><div class="import-bar-fill" id="importBarFill"></div></div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <!-- epub.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.93/epub.min.js"></script>
+
+  <script src="./app.js"></script>
+</body>
+</html>

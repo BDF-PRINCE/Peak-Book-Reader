@@ -1,0 +1,64 @@
+{
+  "name": "peak-reader",
+  "version": "1.0.0",
+  "description": "Peak Reader - An offline ebook reader for Windows and Linux",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "ebook",
+    "reader",
+    "offline"
+  ],
+  "author": "Peak Reader",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "sql.js": "^1.12.0",
+    "pdf-parse": "^1.1.1",
+    "mammoth": "^1.8.0",
+    "jszip": "^3.10.1",
+    "cheerio": "^1.0.0"
+  },
+  "build": {
+    "appId": "com.peakreader.app",
+    "productName": "Peak Reader",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "assets/icon.png",
+      "category": "Utility"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}
