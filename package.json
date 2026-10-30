@@ -1,6 +1,6 @@
 {
   "name": "peak-reader",
-  "version": "1.0.0",
+  "version": "2.5.0",
   "description": "Peak Reader - An offline ebook reader for Windows and Linux",
   "main": "src/main.js",
   "scripts": {

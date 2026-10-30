@@ -1,15 +1,16 @@
 # Peak Reader
 
+Latest release: [v2.5.0](https://github.com/BDF-PRINCE/Peak-Book-Reader/releases/tag/v2.5.0)
+[![Latest release](https://img.shields.io/github/v/release/BDF-PRINCE/Peak-Book-Reader?include_prereleases&label=latest)](https://github.com/BDF-PRINCE/Peak-Book-Reader/releases/latest)
+
 An Electron based Vibecoded book reader by a script kiddie >:)
 <img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/f7151e15-1899-4670-ba0d-72716d7031d4" />
 <img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/ddd8ea85-b7bc-4621-a813-625028f9f0d7" />
 <img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/c02a0e51-b170-4b0a-bfc2-d2b2053b4b8c" />
 <img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/9d73ef3d-af7a-441f-a84f-3a0cbc6a82b5" />
-<img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/9ee16598-388f-457b-a9c7-214c1eb6e9aa" />
+<img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/9ee16598-388f-457b-a9c7-214c1eb6a82b5" />
 <img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/453f0945-a3ef-4157-a138-9af6500455f2" />
 <img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/196164ae-a12b-4bd1-afed-b3f1ca06fddf" />
-
-
 
 ## Features
 
@@ -98,5 +99,4 @@ peak-reader/
 - **Database**: SQLite (`~/.peak-reader/peak-reader.db`)
 - **Covers**: `~/.peak-reader/covers/`
 - **Preferences**: localStorage (theme, sidebar state)
-
 
